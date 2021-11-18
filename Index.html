@@ -1,0 +1,88 @@
+<!--
+    HTML (Hypertext markup language)
+    En este lenguaje usa etiquetas
+        {          Daniel         }
+    <etiqueta>  Contenido </etiqueta>
+    las etiquetas tiene atributos
+    <etiqueta atributo="valor">  Contenido </etiqueta>
+
+    los atributos cambian el comportamiento de las etiquetas
+    <h1 class="uno">Hola</h1>
+
+    las paginas tienen una estructura: cabecera, cuerpo, pie
+-->
+<!DOCTYPE HMTL>
+<html lang="es"><!--lenguaje español-->
+<!--
+    Cabecera: se ubica los metadatos o datos no visibles dentro del
+    cuerpo visual de la pagina
+-->
+<meta charset="utf-8"/>
+<meta name="autor" content="Henry Guanoluisa"/>
+<meta name="keywords" content="web, primera, Henry 1, 2, 3.."/>
+<meta name="copyright" content="Derechos de autor - Henry Guanoluisa"/>
+<link rel="shorcut icon" href="web.ico">
+<head>
+    <title>Mi pagina web</title>
+</head>
+<!--
+    En el body se coloca todos los elementos a mostrar
+-->
+<body>
+    <h1>Mi pagina web</h1>
+    <h2>Hola bienvenido</h2>
+    <!--
+      las etiquetas h son para titulos
+      existen hasta la h6
+      en toda pagina debe haber solo un h1
+      
+      todo lo que existe en un apagina web es texto
+      texto estático o dinámico
+    -->
+    <h2>Textos</h2>
+    <p>Hola 1</p>
+    <p>Hola 2</p>
+    <!--usamos lorem ipsum para generar textos-->
+    <p>
+        Este es un ejemplo de git.
+    </p>
+    <hr>
+    <!--salto de linea con br o con hr
+    cuando una etiquetas no se cierra se la conoce como 
+    huerfana-->
+    <p>
+       Este es el segundo commit de ejemplo
+    </p>
+    <p>
+       este es el tercer commit de ejemplo
+    </p>
+    <p>
+        <strong>Lorem Ipsum</strong> is simply dummy <em>text of the</em> printing and <i>typesetting</i> industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+    </p>
+    <h2>Imágenes</h2>
+    <!--
+        alt texto alternativo
+        title titulo de la imagen
+        src la ruta de la imagen
+            ruta relativa donde nos encontramos ->imagenes/auto.jpg ->recomendable
+            ruta absoluta toda la ruta donde se encuentra la imagen
+                    C:/Users/David/Documents/WEB-2021B/1.html/imagenes/auto.jpg ->no recomendable
+
+        tamaño de la imagen alto/ancho width hieght
+        recomendable solo topar uno de ellos
+        px ->pixel
+
+
+    -->
+    <img alt="Auto" title="Foto de Auto"
+    src="imagenes/auto.jpeg" width="" height="200px"/>
+
+    <img alt="Auto" title="Foto de Auto"
+    src="imagenes/auto.jpeg" width="" height="200px"/>
+
+
+</body>
+<footer>
+
+</footer>
+</html>
