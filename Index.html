@@ -1,88 +1,108 @@
-<!--
-    HTML (Hypertext markup language)
-    En este lenguaje usa etiquetas
-        {          Daniel         }
-    <etiqueta>  Contenido </etiqueta>
-    las etiquetas tiene atributos
-    <etiqueta atributo="valor">  Contenidoooooo </etiqueta>
+<!DOCTYPE html>
+<html lang="en">
 
-    los atributos cambian el comportamiento de las etiquetas
-    <h1 class="uno">Hola</h1>
-
-    las paginas tienen una estructura: cabecera, cuerpo, pie
--->
-<!DOCTYPE HMTL>
-<html lang="es"><!--lenguaje español-->
-<!--
-    Cabecera: se ubica los metadatos o datos no visibles dentro del
-    cuerpo visual de la pagina
--->
-<meta charset="utf-8"/>
-<meta name="autor" content="Henry Guanoluisa"/>
-<meta name="keywords" content="web, primera, Henry 1, 2, 3.."/>
-<meta name="copyright" content="Derechos de autor - Henry Guanoluisa"/>
-<link rel="shorcut icon" href="web.ico">
 <head>
-    <title>Mi pagina web</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/slider.css">
 </head>
-<!--
-    En el body se coloca todos los elementos a mostrar
--->
+
 <body>
-    <h1>Mi pagina web</h1>
-    <h2>Hola bienvenido</h2>
-    <!--
-      las etiquetas h son para titulos
-      existen hasta la h6
-      en toda pagina debe haber solo un h1
-      
-      todo lo que existe en un apagina web es texto
-      texto estático o dinámico
-    -->
-    <h2>Textos</h2>
-    <p>Hola 1</p>
-    <p>Hola 2</p>
-    <!--usamos lorem ipsum para generar textos-->
-    <p>
-        Este es un ejemplo de git con el primer commit
-    </p>
-    <hr>
-    <!--salto de linea con br o con hr
-    cuando una etiquetas no se cierra se la conoce como 
-    huerfana-->
-    <p>
-       Este es el segundo commit de ejemplo
-    </p>
-    <p>
-       este es el tercer commit de ejemplo
-    </p>
-    <p>
-        <strong>Lorem Ipsum</strong> is simply dummy <em>text of the</em> printing and <i>typesetting</i> industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    </p>
-    <h2>Imágenes</h2>
-    <!--
-        alt texto alternativo
-        title titulo de la imagen
-        src la ruta de la imagen
-            ruta relativa donde nos encontramos ->imagenes/auto.jpg ->recomendable
-            ruta absoluta toda la ruta donde se encuentra la imagen
-                    C:/Users/David/Documents/WEB-2021B/1.html/imagenes/auto.jpg ->no recomendable
 
-        tamaño de la imagen alto/ancho width hieght
-        recomendable solo topar uno de ellos
-        px ->pixel
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/crossfade-slide-photo/slideshow.js"></script>
+    <script src="assets/js/datosIniciales.js"></script>
 
+    <div class="container">
+        <header>
+            <div class="header">
+                <h1>Examen IB - WEB 2021B </h1>
+            </div>
+        </header>
+        <div class="clearfix"></div>
+    
+        <nav class="navbar">
+    
+            <a href="">INICIO</a>
+            <a href="">RELOJ</a>
+            <a href="">SOBRE MI</a>
+            <a href="">MIS AMIGOS</a>
+            <a href="">CONTACTO</a>
+    
+        </nav>
+    
+    
+        <div>
+            <div class="slideshow">
+    
+                <div class="slides-box">
+                    <div class="slide">
+                        <p class="title">SLIDE EFFECT<br />Lorem Picsum 1</p>
+                        <img src="https://picsum.photos/1280/720?random=1" alt="image" title="image">
+                    </div>
+    
+                    <div class="slide">
+                        <p class="title">SLIDE EFFECT<br />Lorem Picsum 2</p>
+                        <img src="https://picsum.photos/1280/720?random=2" alt="image" title="image">
+                    </div>
+    
+                    <div class="slide">
+                        <p class="title">SLIDE EFFECT<br />Lorem Picsum 3</p>
+                        <img src="https://picsum.photos/1280/720?random=3" alt="image" title="image">
+                    </div>
+    
+                    <div class="slide">
+                        <p class="title">SLIDE EFFECT<br />Lorem Picsum 4</p>
+                        <img src="https://picsum.photos/1280/720?random=4" alt="image" title="image">
+                    </div>
+    
+                    <div class="slide">
+                        <p class="title">SLIDE EFFECT<br />Lorem Picsum 5</p>
+                        <img src="https://picsum.photos/1280/720?random=5" alt="image" title="image">
+                    </div>
+    
+                </div>
+    
+                <div class="slideshow-buttons">
+    
+                    <div class="prev-btn">&larr;</div>
+                    <div class="next-btn">&rarr;</div>
+    
+                </div>
+    
+            </div>
+        </div>
+    
+        <div>
+            <div class="row">
+                <div class="col col-md-7">
+                    <h2>Column 1</h2>
+                    <p>Some text..</p>
+                </div>
+                <div class="col col-md-5">
+                    <img class="perfil" src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="perfil">
+                    <p style="text-align: justify;">
+                        A user is a person who utilizes a computer or network service. A user often has a user account and is identified to the system by a username. Other terms for username include login name, screenname, account name, nickname and handle, which is derived from the identical citizens band radio term.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
 
-    -->
-    <img alt="Auto" title="Foto de Auto"
-    src="imagenes/auto.jpeg" width="" height="200px"/>
-
-    <img alt="Auto" title="Foto de Auto"
-    src="imagenes/auto.jpeg" width="" height="200px"/>
-
+    <script>
+        $('.slideshow').slideshowPlugin({
+            effect: 'sliding',
+            autoplay: 'true',
+            delay: 3000,
+            slideSpeed: 700,
+            ratio: "keep",
+        });
+    </script>
 
 </body>
-<footer>
 
-</footer>
 </html>

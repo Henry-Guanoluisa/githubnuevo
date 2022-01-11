@@ -1,0 +1,67 @@
+.header{
+    float: right;
+    width: 500px;
+    background-color: #1f0286;
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+
+.navbar a{
+    padding: 10px;
+    text-decoration: none;
+}
+.navbar{
+    margin-top: 20px;
+    background-color: cornflowerblue;
+    width: 480px;
+    padding: 10px;
+
+}
+
+/* Create three equal columns that floats next to each other */
+.col-md-7 {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+.col-md-5 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body{
+    background-image: url("https://fondosmil.com/fondo/17024.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    background-color: rgba(204, 255, 255, 1);
+    padding: 50px;
+    margin: 20px 200px;
+}
+
+img.perfil{
+    width: 180px;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+}
