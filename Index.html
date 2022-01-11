@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="assets/css/slider.css">
 </head>
 
-<body>
+<body onload="getData()">
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/crossfade-slide-photo/slideshow.js"></script>
-    <script src="assets/js/datosIniciales.js"></script>
+    <!-- <script src="assets/json/data.json"></script> -->
 
     <div class="container">
         <header>
@@ -23,74 +23,78 @@
             </div>
         </header>
         <div class="clearfix"></div>
-    
+
         <nav class="navbar">
-    
+
             <a href="">INICIO</a>
             <a href="">RELOJ</a>
             <a href="">SOBRE MI</a>
             <a href="">MIS AMIGOS</a>
             <a href="">CONTACTO</a>
-    
+
         </nav>
-    
-    
+
+
         <div>
             <div class="slideshow">
-    
+
                 <div class="slides-box">
                     <div class="slide">
                         <p class="title">SLIDE EFFECT<br />Lorem Picsum 1</p>
                         <img src="https://picsum.photos/1280/720?random=1" alt="image" title="image">
                     </div>
-    
+
                     <div class="slide">
                         <p class="title">SLIDE EFFECT<br />Lorem Picsum 2</p>
                         <img src="https://picsum.photos/1280/720?random=2" alt="image" title="image">
                     </div>
-    
+
                     <div class="slide">
                         <p class="title">SLIDE EFFECT<br />Lorem Picsum 3</p>
                         <img src="https://picsum.photos/1280/720?random=3" alt="image" title="image">
                     </div>
-    
+
                     <div class="slide">
                         <p class="title">SLIDE EFFECT<br />Lorem Picsum 4</p>
                         <img src="https://picsum.photos/1280/720?random=4" alt="image" title="image">
                     </div>
-    
+
                     <div class="slide">
                         <p class="title">SLIDE EFFECT<br />Lorem Picsum 5</p>
                         <img src="https://picsum.photos/1280/720?random=5" alt="image" title="image">
                     </div>
-    
+
                 </div>
-    
+
                 <div class="slideshow-buttons">
-    
+
                     <div class="prev-btn">&larr;</div>
                     <div class="next-btn">&rarr;</div>
-    
+
                 </div>
-    
+
             </div>
         </div>
-    
+
         <div>
             <div class="row">
                 <div class="col col-md-7">
-                    <h2>Column 1</h2>
-                    <p>Some text..</p>
+                    <ul>
+                    </ul>
                 </div>
                 <div class="col col-md-5">
-                    <img class="perfil" src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png" alt="perfil">
+                    <img class="perfil" src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+                        alt="perfil">
                     <p style="text-align: justify;">
-                        A user is a person who utilizes a computer or network service. A user often has a user account and is identified to the system by a username. Other terms for username include login name, screenname, account name, nickname and handle, which is derived from the identical citizens band radio term.
+                        A user is a person who utilizes a computer or network service. A user often has a user account
+                        and is identified to the system by a username. Other terms for username include login name,
+                        screenname, account name, nickname and handle, which is derived from the identical citizens band
+                        radio term.
                     </p>
                 </div>
             </div>
         </div>
-    
+
     </div>
 
     <script>
@@ -101,6 +105,40 @@
             slideSpeed: 700,
             ratio: "keep",
         });
+    </script>
+    <script>
+        function getData() {
+
+            const data = [{
+                "titulo": "Prueba de titulo 1 ",
+                "publicado": "Publicado el dia 10 de enero del 2022",
+                "descripcion": "The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects."
+            }, {
+                "titulo": "Prueba de titulo 2 ",
+                "publicado": "Publicado el dia 10 de enero del 2022",
+                "descripcion": "The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects."
+            }, {
+                "titulo": "Prueba de titulo 3 ",
+                "publicado": "Publicado el dia 10 de enero del 2022",
+                "descripcion": "The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects."
+            }, {
+                "titulo": "Prueba de titulo 4",
+                "publicado": "Publicado el dia 10 de enero del 2022",
+                "descripcion": "The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects."
+            }, {
+                "titulo": "Prueba de titulo 5 ",
+                "publicado": "Publicado el dia 10 de enero del 2022",
+                "descripcion": "The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects."
+            }
+            ]
+
+            data.forEach((item, index) => {
+
+
+                $("ul").append(`<h3>${item.titulo}</h3><h6>${item.publicado}</h6><p>${item.descripcion}</p><button type="button">Ver mas</button>`);
+            })
+
+        }
     </script>
 
 </body>
