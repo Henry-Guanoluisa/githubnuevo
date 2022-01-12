@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Examen</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <script src="assets/js/jquery.min.js"></script>
 </head>
+
 <body>
-    
+
+
+    <!-- <script src="assets/json/data.json"></script> -->
+
+    <div class="container">
+        <header>
+            <div class="header">
+                <h1>Examen IB - WEB 2021B </h1>
+            </div>
+        </header>
+        <div class="clearfix"></div>
+
+        <nav class="navbar">
+
+            <a href="Index.html">INICIO</a>
+            <a href="reloj.html">RELOJ</a>
+            <a href="sobremi.html">SOBRE MI</a>
+            <a href="amigos.html">MIS AMIGOS</a>
+            <a href="contacto.html">CONTACTO</a>
+
+        </nav>
+        <section class="redes">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="redes sociales/facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="redes sociales/youtube.png" alt="youtube">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="redes sociales/whatsapp.png" alt="whatssap">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="redes sociales/twitter.png" alt="twitter">
+            </a>
+        </section>
+
+        <div>
+            <div class="row">
+                <div class="col col-md-7">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="col col-md-5">
+                    <img class="perfil" src="https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png"
+                        alt="perfil">
+                    <p style="text-align: justify;">
+                        A user is a person who utilizes a computer or network service. A user often has a user account
+                        and is identified to the system by a username. Other terms for username include login name,
+                        screenname, account name, nickname and handle, which is derived from the identical citizens band
+                        radio term.
+                    </p>
+                    <div id="form-user">
+                        <h4>Identificate</h4>
+                        <form action="" id="myform">
+                            <div class="form">
+                                <label for="nombre">Nombre</label><br>
+                                <input autocomplete="off" type="text" name="nombre" id="nombre">
+                            </div>
+                            <div class="form">
+                                <label for="correo">Correo</label><br>
+                                <input autocomplete="off" type="email" name="correo" id="correo">
+                            </div>
+                            <div class="form">
+                                <label for="password">Password</label><br>
+                                <input autocomplete="off" type="password" name="password" id="password">
+                            </div>
+                            <button type="button" class="btn btn-login" onclick="enviarData()">Entrar</button>
+                        </form>
+                    </div>
+                    <div id="user-exist" style="display: none;">
+                        <p>
+                            Bienvenido
+                        <h6 id="nombre-user"></h6>
+                        </p>
+                        <a onclick="salir()">Salir <img class="logout" src="img/logout.png" alt="logout"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p class="footer-title">
+            Aplicaciones Web 2021B
+        </p>
+        <p class="footer-autor">
+            HDGH
+        </p>
+        <p class="footer-volver" onclick="volverArriba()">
+            ir Arriba
+        </p>
+    </footer>
+
 </body>
+
 </html>
