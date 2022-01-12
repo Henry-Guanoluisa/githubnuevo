@@ -65,3 +65,57 @@ img.perfil{
     display: flex;
     margin: 0 auto;
 }
+.redes{
+    position: fixed;
+    right: 0px;
+    top: 50px;
+}
+.redes a{
+    display: block;
+}
+
+.footer{
+    padding: 50px;
+    margin: 20px 200px;
+    background-color: rgba(204, 255, 255, 1);
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.footer p {
+    margin-right: 20px;
+    position: absolute;
+}
+.footer-volver{
+    right: 0px;
+    cursor: pointer;
+}
+.footer-title{
+    left: 0px;
+    padding-left: 10px;
+}
+
+.footer-autor{
+    left: 50%;
+}
+.btn-primary{
+    background-color: burlywood;
+    border: burlywood 1px solid;
+}
+.form{
+    margin-bottom: 20px;
+}
+
+.btn-login{
+    background-color: blue;
+    border: blue 1px solid;
+}
+
+.btn{
+    color: white;
+    padding: 5px;
+}
+img.logout{
+    width: 20px;
+    height: auto;
+}

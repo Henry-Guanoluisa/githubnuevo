@@ -8,12 +8,13 @@
     <title>Examen</title>
     <link href="assets/css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/slider.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/crossfade-slide-photo/slideshow.js"></script>
 </head>
 
 <body onload="getData()">
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/crossfade-slide-photo/slideshow.js"></script>
+
     <!-- <script src="assets/json/data.json"></script> -->
 
     <div class="container">
@@ -27,12 +28,26 @@
         <nav class="navbar">
 
             <a href="">INICIO</a>
-            <a href="">RELOJ</a>
-            <a href="">SOBRE MI</a>
-            <a href="">MIS AMIGOS</a>
-            <a href="">CONTACTO</a>
+            <a href="reloj.html">RELOJ</a>
+            <a href="sobremi.html">SOBRE MI</a>
+            <a href="amigos.html">MIS AMIGOS</a>
+            <a href="contacto.html">CONTACTO</a>
 
         </nav>
+        <section class="redes">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="redes sociales/facebook.png" alt="facebook">
+            </a>
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="redes sociales/youtube.png" alt="youtube">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="redes sociales/whatsapp.png" alt="whatssap">
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+                <img src="redes sociales/twitter.png" alt="twitter">
+            </a>
+        </section>
 
 
         <div>
@@ -91,11 +106,48 @@
                         screenname, account name, nickname and handle, which is derived from the identical citizens band
                         radio term.
                     </p>
+                    <div id="form-user">
+                        <h4>Identificate</h4>
+                        <form action="" id="myform">
+                            <div class="form">
+                                <label for="nombre">Nombre</label><br>
+                                <input autocomplete="off" type="text" name="nombre" id="nombre">
+                            </div>
+                            <div class="form">
+                                <label for="correo">Correo</label><br>
+                                <input autocomplete="off" type="email" name="correo" id="correo">
+                            </div>
+                            <div class="form">
+                                <label for="password">Password</label><br>
+                                <input autocomplete="off" type="password" name="password" id="password">
+                            </div>
+                            <button type="button" class="btn btn-login" onclick="enviarData()">Entrar</button>
+                        </form>
+                    </div>
+                    <div id="user-exist" style="display: none;">
+                        <p>
+                            Bienvenido
+                        <h6 id="nombre-user"></h6>
+                        </p>
+                        <a onclick="salir()">Salir <img class="logout" src="img/logout.png" alt="logout"></a>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
+
+    <footer class="footer">
+        <p class="footer-title">
+            Aplicaciones Web 2021B
+        </p>
+        <p class="footer-autor">
+            HDGH
+        </p>
+        <p class="footer-volver" onclick="volverArriba()">
+            ir Arriba
+        </p>
+    </footer>
 
     <script>
         $('.slideshow').slideshowPlugin({
@@ -135,11 +187,58 @@
             data.forEach((item, index) => {
 
 
-                $("ul").append(`<h3>${item.titulo}</h3><h6>${item.publicado}</h6><p>${item.descripcion}</p><button type="button">Ver mas</button>`);
+                $("ul").append(`<h3>${item.titulo}</h3><h6>${item.publicado}</h6><p>${item.descripcion}</p><button type="button" class="btn-primary">Ver mas</button>`);
             })
 
         }
+
+        function volverArriba() {
+            $('.footer-volver').click(function () {
+                $('body, html').animate({
+                    scrollTop: '0px'
+                }, 300);
+            });
+
+        }
+
+        function enviarData() {
+            let nombre = document.getElementById("nombre")
+            let correo = document.getElementById("correo")
+            let password = document.getElementById("password")
+
+            if (nombre.value == "" || correo.value == "" || password.value == "") {
+                return
+            } else {
+                const userExist = JSON.parse(localStorage.getItem("user"))
+                if (userExist) {
+
+                    if (userExist.nombre == nombre.value) {
+                        console.log(userExist.nombre);
+                        $("#form-user").css("display", "none")
+                        $("#user-exist").css("display", "block")
+                        $('#nombre-user').append(userExist.nombre);
+
+                    } else {
+                        localStorage.setItem("user", JSON.stringify({
+                            nombre: nombre.value
+                        }))
+                    }
+
+                } else {
+                    localStorage.setItem("user", JSON.stringify({
+                        nombre: nombre.value
+                    }))
+                }
+                $('#myform')[0].reset();
+            }
+        }
+        function salir() {
+            $("#form-user").css("display", "block")
+            $("#user-exist").css("display", "none")
+            localStorage.clear()
+        }
     </script>
+
 
 </body>
 
