@@ -1,0 +1,8 @@
+.title-moda{
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+.title-moda h1{
+  font-size: 50px;
+}
