@@ -9,6 +9,11 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { TiendaComponent } from './Components/tienda/tienda.component';
 import { ContactoComponent } from './Components/contacto/contacto.component';
 import { AdminComponent } from './Components/admin/admin.component';
+import {ButtonModule} from 'primeng/button';
+import {DialogModule} from 'primeng/dialog';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
+import {PaginatorModule} from "primeng/paginator";
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { AdminComponent } from './Components/admin/admin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    DialogModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

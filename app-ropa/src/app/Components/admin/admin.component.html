@@ -1,7 +1,7 @@
 <div style="margin-top: 50px;margin-bottom: 100px">
 
   <div style="margin-bottom: 20px">
-    <button type="button" class="btn btn-warning">Agregar</button>
+    <button type="button" class="btn btn-warning" (click)="displayAgregar=true">Agregar</button>
   </div>
 
   <table class="table">
@@ -31,3 +31,45 @@
   </table>
 
 </div>
+
+<p-dialog header="Agregar Producto" [(visible)]="displayAgregar" [modal]="true"  [style]="{width: '75vw'}">
+  <form class="was-validated" (ngSubmit)="saveProduct()" #forma="ngForm">
+    <div class="mb-3">
+      <label for="tituloAgregar" class="form-label">Nombre de la prenda</label>
+      <input type="text"
+             class="form-control"
+             id="tituloAgregar"
+             placeholder="Nombre del producto"
+             required
+              [(ngModel)]="product.titulo"
+              name="nameProdSave"
+             autocomplete="off">
+    </div>
+    <div class="mb-3">
+      <label for="precioAgregar" class="form-label">Precio de la prenda</label>
+      <input type="text"
+             class="form-control"
+             id="precioAgregar"
+             placeholder="$20.00" required
+              [(ngModel)]="product.precio"
+              name="priceProdSave"
+             autocomplete="off">
+    </div>
+    <div class="mb-3">
+      <label for="imgAgregar" class="form-label">Imagen de la prenda</label>
+      <input type="text"
+             class="form-control"
+             id="imgAgregar"
+             placeholder="https://www."
+             [(ngModel)]="product.img"
+             name="imgProdSave"
+             required
+             autocomplete="off">
+    </div>
+    <button type="submit" class="btn btn-primary" style="margin-right: 10px" [disabled]="forma.invalid">Agregar</button>
+    <button type="button" class="btn btn-danger" (click)="displayAgregar=false">Cancelar</button>
+
+  </form>
+
+
+</p-dialog>
