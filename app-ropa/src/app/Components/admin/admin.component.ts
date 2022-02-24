@@ -13,9 +13,13 @@ export class AdminComponent implements OnInit {
     precio: "",
     img: ""
   }
+  productsGet = []
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.getProducts().subscribe((data)=>{
+      console.log(data)
+    })
   }
   saveProduct(){
     this.displayAgregar = false
