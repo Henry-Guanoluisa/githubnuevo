@@ -18,12 +18,22 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((data)=>{
-      console.log(data)
+      this.productsGet = data
     })
   }
   saveProduct(){
     this.displayAgregar = false
     this.productService.saveProduct(this.product).subscribe(()=>{
+    })
+  }
+  eliminarProduct(id: any){
+    this.productService.deleteProduct(id).subscribe(()=>{
+      console.log("producto eliminado")
+      this.productService.getProducts().subscribe((data)=>{
+        this.productsGet = data
+      })
+    }, error => {
+      console.log("producto no eliminado")
     })
   }
 

@@ -4,7 +4,7 @@
     <button type="button" class="btn btn-warning" (click)="displayAgregar=true">Agregar</button>
   </div>
 
-  <table class="table">
+  <table class="table" *ngIf="productsGet.length > 0">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -15,16 +15,16 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
+    <tr *ngFor="let product of productsGet;index as i">
+      <th scope="row">{{ i + 1}}</th>
       <td>
-        <img class="avatar-cloth" src="http://bebeplus.store/wp-content/uploads/2021/06/Buzo-azul-toalla-filos-rosados.jpg" alt="">
+        <img class="avatar-cloth" [src]="product.imagen" alt="">
       </td>
-      <td>buzo azul toalla filis rosados</td>
-      <td>$20,00</td>
+      <td>{{product.titulo}}</td>
+      <td>{{product.precio}}</td>
       <td>
         <button type="button" class="btn btn-primary" style="margin-right: 20px">Editar</button>
-        <button type="button" class="btn btn-danger">Eliminar</button>
+        <button type="button" class="btn btn-danger" (click)="eliminarProduct(product._id)">Eliminar</button>
       </td>
     </tr>
     </tbody>
